@@ -1,0 +1,31 @@
+body,
+header {
+  display: flex;
+  background-color: antiquewhite;
+  align-items: flex-end;
+}
+header h1 {
+  color: rgb(66, 70, 194);
+}
+header h2 {
+  font-style: italic;
+}
+section h1 {
+  color: #ff5500;
+  margin-left: 20px;
+}
+section ul li {
+  margin-left: 35px;
+  color: #0d4240;
+  font-style: oblique;
+  font-size: larger;
+}
+footer h1 {
+  margin-left: 20px;
+  color: blueviolet;
+}
+footer p {
+  margin-left: 55px;
+  color: rgb(69, 40, 88);
+  font-size: large;
+}
