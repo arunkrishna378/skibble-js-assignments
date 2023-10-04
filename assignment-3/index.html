@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body,h1{color: brown;}
+        table{
+            text-align: center;
+            width: 75%;
+        }
+        table,thead{
+        color: rgb(8, 60, 17);
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Friends List...</h1>
+    <br>
+    <br>
+    <table  id="my table" border="3px" >
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Occupation</th>
+          <th>Place</th>
+        </tr>
+        <tr>
+          <td>Ritesh</td>
+          <td>24</td>
+          <td>Business Man</td>
+          <td>Warangal</td>
+        </tr>
+        <tr>
+          <td>Neeraj</td>
+          <td>25</td>
+          <td>Employee in TCS</td>
+          <td>Hyderabad</td>
+        </tr>
+        <tr>
+          <td>Sanjay</td>
+          <td>24</td>
+          <td>Employee in Accenture</td>
+          <td>Hyderabad</td>
+        </tr>
+        <tr>
+          <td>Praveen</td>
+          <td>26</td>
+          <td>Businees Man</td>
+          <td>Hyderabad</td>
+        </tr>
+        <tr>
+          <td>Hari Prasad</td>
+          <td>25</td>
+          <td>Farmer</td>
+          <td>Hyderabad</td>
+        </tr>
+      </thead>
+    </table>
+    <script>
+        let data= [
+            {name:"Ritesh",age:"24"occupation:"Business Man", place:"Warangal"}
+            {name:"Neeraj",age:"25",occupation:"Employee in TCS", place:"Hyderabad"}
+            {name:"Sanjay",age:"24",occupation:"Employee in Accenture",place:"Hyderabad"}
+            {name:"Praveen",age:"26",occupation:"Businees Man",place:"Hyderabad"}
+            {name:"Hari Prasad",age:"25",occupation:"Farmer",place:"Hyderabad"}
+        ]
+        let table = document.getElementById("my table ")
+    </script>
+  </body>
+</html>
