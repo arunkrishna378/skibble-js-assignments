@@ -5,21 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        body,h1{color: brown;}
-        table{
-            text-align: center;
-            width: 75%;
-        }
-        table,thead{
-        color: rgb(8, 60, 17);
-        }
+      body {
+        font-style: oblique;
+        background-color: rgb(226, 236, 236);
+        margin: 75px;
+      }
+      h1 {
+        font-style: normal;
+        font-weight: bold;
+      }
+      #coustomerForm {
+        width: 25%;
+        margin: 1%;
+        background-color: rgb(175, 171, 167);
+      }
+      form {
+        text-align: center;
+        width: 50%;
+        padding: 3%;
+      }
+      label {
+        text-align: center;
+      }
+      input {
+        color: rgb(44, 14, 4);
+      }
+      button {
+        background-color: yellow;
+        font-size: large;
+        font-family: sans-serif;
+      }
+      table {
+        width: 100px;
+        border-radius: collapse;
+        margin-top: 15px;
+      }
+      table,
+      th,
+      td {
+        border: 3px solid black;
+        align-items: left;
+      }
+      th,
+      td {
+        padding: 15px;
+        
+      }
+      thead {
+        background-color: rgb(91, 49, 8);
+        color: cornsilk;
+      }
     </style>
   </head>
   <body>
-    <h1>Friends List...</h1>
-    <br>
-    <br>
-    <table  id="my table" border="3px" >
+    <h1>Enter Here Customer Details</h1>
+
+    <form id="customerForm">
+      <label for="customername">Name:</label>
+      <br />
+      <input type="text" id="customername" required />
+      <br />
+      <label for="customerage">Age:</label>
+      <br />
+      <input type="number" id="customerage" required />
+      <br />
+      <label for="customeroccupation">Occupation:</label>
+      <br />
+      <input type="text" id="customeroccupation" required />
+      <br />
+      <label for="customerplace">Place:</label>
+      <br />
+      <input type="text" id="customerplace" required />
+      <br />
+      <br />
+      <button type="submit">Add Customer</button>
+    </form>
+    <h2>Customer Data</h2>
+
+    <table>
       <thead>
         <tr>
           <th>Name</th>
@@ -27,47 +90,58 @@
           <th>Occupation</th>
           <th>Place</th>
         </tr>
-        <tr>
-          <td>Ritesh</td>
-          <td>24</td>
-          <td>Business Man</td>
-          <td>Warangal</td>
-        </tr>
-        <tr>
-          <td>Neeraj</td>
-          <td>25</td>
-          <td>Employee in TCS</td>
-          <td>Hyderabad</td>
-        </tr>
-        <tr>
-          <td>Sanjay</td>
-          <td>24</td>
-          <td>Employee in Accenture</td>
-          <td>Hyderabad</td>
-        </tr>
-        <tr>
-          <td>Praveen</td>
-          <td>26</td>
-          <td>Businees Man</td>
-          <td>Hyderabad</td>
-        </tr>
-        <tr>
-          <td>Hari Prasad</td>
-          <td>25</td>
-          <td>Farmer</td>
-          <td>Hyderabad</td>
-        </tr>
       </thead>
+      <tbody id="customerTable">
+        
+      </tbody>
     </table>
     <script>
-        let data= [
-            {name:"Ritesh",age:"24"occupation:"Business Man", place:"Warangal"}
-            {name:"Neeraj",age:"25",occupation:"Employee in TCS", place:"Hyderabad"}
-            {name:"Sanjay",age:"24",occupation:"Employee in Accenture",place:"Hyderabad"}
-            {name:"Praveen",age:"26",occupation:"Businees Man",place:"Hyderabad"}
-            {name:"Hari Prasad",age:"25",occupation:"Farmer",place:"Hyderabad"}
-        ]
-        let table = document.getElementById("my table ")
+      const customers = [];
+
+      const customerForm = document.getElementById("customerForm");
+      const customerTable = document.getElementById("customerTable");
+
+      function addCustomer(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("customername").value;
+        const age = document.getElementById("customerage").value;
+        const occupation = document.getElementById("customeroccupation").value;
+        const place = document.getElementById("customerplace").value;
+
+        const customer = { name, age, occupation, place };
+
+        customers.push(customer);
+
+        customerForm.reset();
+
+        updateTable();
+      }
+      function updateTable() {
+        customerTable.innerHTML = " ";
+
+        customers.forEach((customer) => {  
+          const row = document.createElement("tr");
+          const nameCell = document.createElement("td");
+          const ageCell = document.createElement("td");
+          const occupationCell = document.createElement("td");
+          const placeCell = document.createElement("td");
+
+          nameCell.textContent = customer.name;
+          ageCell.textContent = customer.age;
+          occupationCell.textContent = customer.occupation;
+          placeCell.textContent = customer.place;
+
+          row.appendChild(nameCell);
+          row.appendChild(ageCell);
+          row.appendChild(occupationCell);
+          row.appendChild(placeCell);
+
+          customerTable.appendChild(row);
+        } );
+      }
+
+      customerForm.addEventListener("submit", addCustomer);
     </script>
   </body>
 </html>
