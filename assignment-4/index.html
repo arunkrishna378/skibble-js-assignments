@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header><h1>Gallery</h1></header>
+    <div class="full-img" id="fullImgBox">
+      <img
+        src="https://images.news18.com/ibnlive/uploads/2023/02/prabhas-salaar-16758417254x3.jpg" id="fullImg"
+      />
+      <span onclick="closeFullImg()">x</span>
+    </div>
+    <div class="Gallery">
+      <img
+        src="https://images.news18.com/ibnlive/uploads/2023/02/prabhas-salaar-16758417254x3.jpg" onclick="openFullImg(this.src)"
+      />
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHyIAMK7plPe-1PMCyWtV9FaUCWhomnf3SNw&usqp=CAU" onclick="openFullImg(this.src)"
+      />
+      <img
+        src="https://static.toiimg.com/thumb/msid-89789889,width-1280,height-720,resizemode-4/89789889.jpg" onclick="openFullImg(this.src)"
+      />
+      <img
+        src="https://gumlet.assettype.com/freepressjournal/2023-10/5b5d8e35-7dce-4004-b9cc-cffdec0b68f4/F7671_xa0AAsq0r.jpg" onclick="openFullImg(this.src)"
+      />
+      <img
+        src="https://yt3.googleusercontent.com/iogG8RVPb49OyvLtnJJ61ltWouozunOuFN94GhByYUDZiMCNpjjDTVJtc8-hUAHk-uN8MrQyC1o=s900-c-k-c0x00ffffff-no-rj"  onclick="openFullImg(this.src)"
+      />
+      <img
+        src="https://m.media-amazon.com/images/I/81ep4l+J12L._AC_UF1000,1000_QL80_.jpg" onclick="openFullImg(this.src)"
+      />
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmbnoTe4Bx1CkrF5BUdSZSd2d4e9NJUboASw&usqp=CAU" onclick="openFullImg(this.src)"
+      />
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTybX2mpMfaiJD-KwrNO0HH7tP8Tya6VBrzgQ&usqp=CAU" onclick="openFullImg(this.src)"
+      />
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXvy3-4U-QI8Uk_nAGynKN4JgRy_bAGahoTQ&usqp=CAU" onclick="openFullImg(this.src)"
+      />
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaNlvOylOKAkAAWzJJ-vzkm5j4uKSGBtojfA&usqp=CAU" onclick="openFullImg(this.src)" 
+      />
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbdKT9cQnexn5__F8241mrh_t0ThbfjFWqtg&usqp=CAU" onclick="openFullImg(this.src)"
+      />
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTNcZQ0snGcAA7eDXE-kMVX02pqe1EoDn0nw&usqp=CAU" onclick="openFullImg(this.src)"
+      />
+    </div>
+    <script>
+      var fullImgBox = document.getElementById("fullImgBox");
+      var fullImg = document.getElementById("fullImg");
+
+      function openFullImg(pic ){
+        fullImgBox.style.display = "flex ";
+        fullImg.src = pic;
+      }
+      function closeFullImg() {
+        fullImgBox.style.display ="none";
+      }
+    </script>
+  </body>
+</html>

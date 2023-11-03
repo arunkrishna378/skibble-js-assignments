@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body background="red">
-    <h1>I I am assgignment 2</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA_compatable" content="IE=edges" />
+    <meta name="viewport" content="width=device-width,intial-scale=1.0" />
+    <title>Bank Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <input 
     
-</body>
+      id="credit-data"
+      type="number"
+      placeholder="Enter the Amount"
+      required
+    />
+    <button  onclick="creditinfo()">Credit</button>
+    <input
+      id="debit-data"
+      type="number"
+      placeholder="Enter the Amount"
+      required
+    />
+    <button onclick="debitinfo()">Debit</button>
+    <br></br>
+    <button onclick="output()">Total balance</button>
+    <table style="margin-top: 50px; padding: 10px" border="8" width="75%">
+      <tbody>
+        <tr>
+          <th>BANK TRANSACTOINS</th>
+        </tr>
+        <tr id="table"></tr>
+      </tbody>
+    </table>
+
+    <script src="script.js"></script>
+  </body>
 </html>

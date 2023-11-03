@@ -1,0 +1,13 @@
+
+button  {
+  background-color: rgb(184, 244, 18);
+
+}
+tbody tr th { background-color: blue; 
+  font-weight: 150;
+  
+font-size: larger;
+font-style: initial;}
+table{
+  background-color: aqua;
+}
